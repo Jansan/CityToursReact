@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import "./App.scss";
 import Navbar from './components/Navbar/Navbar';
+import TourList from './components/TourList/index';
+import Tour from './components/Tour/Tour';
 
 
 class App extends Component {
@@ -8,6 +10,7 @@ class App extends Component {
     return (
       <div>
         <Navbar />
+        <TourList />
       </div>
     )
   }
