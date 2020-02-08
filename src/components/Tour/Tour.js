@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './Tour.scss';
 
 class Tour extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
             showInfo: false
@@ -15,12 +15,13 @@ class Tour extends Component {
         })
     }
     render() {
-        const { city, img, name, info } = this.props.tour;
+        const { id, city, img, name, info } = this.props.tour;
+        const { removeTour } = this.props;
         return (
             <article className="tour">
                 <div className="img-container">
                     <img src={img} alt="img" />
-                    <span className="close-btn">
+                    <span className="close-btn" onClick={() => { removeTour(id) }}>
                         <i className="fas fa-window-close"></i>
                     </span>
                 </div>
